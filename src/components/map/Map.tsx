@@ -61,13 +61,13 @@ export const Map = ({portalId, onViewReady}: MapProps) => {
         title: 'Schulich School of Business',
       });
 
-      const buildingLayer2 = new EsriBuildingSceneLayer({
-        url: 'https://tiles.arcgis.com/tiles/As5CFN3ThbQpy8Ph/arcgis/rest/services/Bergeron/SceneServer',
-        title: 'Bergeron',
-      });
+      // const buildingLayer2 = new EsriBuildingSceneLayer({
+      //   url: 'https://tiles.arcgis.com/tiles/As5CFN3ThbQpy8Ph/arcgis/rest/services/Bergeron/SceneServer',
+      //   title: 'Bergeron',
+      // });
 
       map.add(buildingLayer);
-      map.add(buildingLayer2);
+      // map.add(buildingLayer2);
 
       view = new EsriSceneView({
         container: mapEl.current as HTMLDivElement,
@@ -92,13 +92,13 @@ export const Map = ({portalId, onViewReady}: MapProps) => {
         view,
         layers: [buildingLayer],
       });
-      const buildingExplorer2 = new EsriBuildingExplorer({
-        view,
-        layers: [buildingLayer2],
-      });
+      // const buildingExplorer2 = new EsriBuildingExplorer({
+      //   view,
+      //   layers: [buildingLayer2],
+      // });
 
       view.ui.add(buildingExplorer, 'top-right');
-      view.ui.add(buildingExplorer2, 'top-right');
+      // view.ui.add(buildingExplorer2, 'top-right');
 
       const homeWidget = new EsriHome({view});
       view.ui.add(homeWidget, 'top-left');
@@ -108,11 +108,15 @@ export const Map = ({portalId, onViewReady}: MapProps) => {
       //   view,
       // });
       // view.ui.add(distanceMeasureWidget3D, 'top-right');
+      console.log(map.layers.getItemAt(3));
+
+      // console.log(map.layers.map((layer) => layer.title));
+
       const searchWidget = new EsriSearch({
         view,
         sources: [
           {
-            layer: map.layers.getItemAt(1),
+            layer: map.layers.getItemAt(3),
             searchFields: ['Name'],
             displayField: 'Name',
             exactMatch: false,
