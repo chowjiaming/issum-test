@@ -13,11 +13,11 @@ export const DistanceMeasurement: React.FC<DistanceMeasurementProps> = ({
   const distanceMeasurementRef = createRef<HTMLCalcitePanelElement>();
 
   useEffect(() => {
-    let distanceMeasurement: __esri.DistanceMeasurement2D;
+    let distanceMeasurement: __esri.DirectLineMeasurement3D;
 
-    loadModules(['esri/widgets/DistanceMeasurement2D']).then(
-      ([DistanceMeasurement2D]) => {
-        distanceMeasurement = new DistanceMeasurement2D({
+    loadModules(['esri/widgets/DirectLineMeasurement3D']).then(
+      ([DirectLineMeasurement3D]) => {
+        distanceMeasurement = new DirectLineMeasurement3D({
           view,
           container: distanceMeasurementRef.current,
         });
