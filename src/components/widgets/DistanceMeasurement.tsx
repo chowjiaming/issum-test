@@ -1,12 +1,10 @@
-/* eslint-disable */
 import {createRef, useEffect} from 'react';
 import {loadModules} from 'esri-loader';
 import {CalcitePanel} from '@esri/calcite-components-react';
 
-interface DistanceMeasurementProps {
+type DistanceMeasurementProps = {
   view: __esri.MapView;
-}
-
+};
 export const DistanceMeasurement: React.FC<DistanceMeasurementProps> = ({
   view,
 }) => {
@@ -31,7 +29,7 @@ export const DistanceMeasurement: React.FC<DistanceMeasurementProps> = ({
     };
   }, [view, distanceMeasurementRef]);
 
-  return <CalcitePanel ref={distanceMeasurementRef}></CalcitePanel>;
+  return <CalcitePanel ref={distanceMeasurementRef} />;
 };
 
 DistanceMeasurement.displayName = 'DistanceMeasurement';

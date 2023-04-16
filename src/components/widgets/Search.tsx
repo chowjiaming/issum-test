@@ -1,12 +1,10 @@
-/* eslint-disable */
 import {createRef, useEffect} from 'react';
 import {loadModules} from 'esri-loader';
 import {CalcitePanel} from '@esri/calcite-components-react';
 
-interface SearchProps {
+type SearchProps = {
   view: __esri.MapView;
-}
-
+};
 export const Search: React.FC<SearchProps> = ({view}) => {
   const searchRef = createRef<HTMLCalcitePanelElement>();
 
@@ -24,7 +22,7 @@ export const Search: React.FC<SearchProps> = ({view}) => {
     };
   }, [view, searchRef]);
 
-  return <CalcitePanel ref={searchRef}></CalcitePanel>;
+  return <CalcitePanel ref={searchRef} />;
 };
 
 Search.displayName = 'Search';

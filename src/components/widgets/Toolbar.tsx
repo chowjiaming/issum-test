@@ -1,4 +1,3 @@
-/* eslint-disable */
 import '@esri/calcite-components/dist/calcite/calcite.css';
 import {
   CalciteAction,
@@ -20,26 +19,14 @@ export const Toolbar: React.FC<ToolbarProps> = ({onActionClick}) => {
     <CalciteShell>
       <CalciteShellPanel slot="primary-panel">
         <CalciteActionBar slot="action-bar">
-          <CalciteAction
-            text="Layers"
-            icon="layers"
-            onClick={handleClick}
-          ></CalciteAction>
-          <CalciteAction
-            text="Legend"
-            icon="legend"
-            onClick={handleClick}
-          ></CalciteAction>
+          <CalciteAction text="Layers" icon="layers" onClick={handleClick} />
+          <CalciteAction text="Legend" icon="legend" onClick={handleClick} />
           <CalciteAction
             text="Distance"
             icon="measure-line"
             onClick={handleClick}
-          ></CalciteAction>
-          <CalciteAction
-            text="Search"
-            icon="search"
-            onClick={handleClick}
-          ></CalciteAction>
+          />
+          <CalciteAction text="Search" icon="search" onClick={handleClick} />
         </CalciteActionBar>
       </CalciteShellPanel>
     </CalciteShell>

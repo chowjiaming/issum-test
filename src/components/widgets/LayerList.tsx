@@ -1,4 +1,3 @@
-/* eslint-disable */
 import {createRef, useEffect} from 'react';
 import {loadModules} from 'esri-loader';
 import {CalcitePanel} from '@esri/calcite-components-react';
@@ -23,7 +22,7 @@ export const LayerList: React.FC<LayerListProps> = ({view}) => {
     };
   }, [view, layerListRef]);
 
-  return <CalcitePanel ref={layerListRef}></CalcitePanel>;
+  return <CalcitePanel ref={layerListRef} />;
 };
 
 LayerList.displayName = 'LayerList';

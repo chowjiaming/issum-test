@@ -1,4 +1,3 @@
-/* eslint-disable */
 import {createRef, useEffect} from 'react';
 import {loadModules} from 'esri-loader';
 import {CalcitePanel} from '@esri/calcite-components-react';
@@ -23,7 +22,7 @@ export const Legend: React.FC<LegendProps> = ({view}) => {
     };
   }, [view, legendRef]);
 
-  return <CalcitePanel ref={legendRef}></CalcitePanel>;
+  return <CalcitePanel ref={legendRef} />;
 };
 
 Legend.displayName = 'Legend';

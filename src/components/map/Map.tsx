@@ -1,13 +1,10 @@
-/* eslint-disable */
 import {useEffect, useRef} from 'react';
 import {loadModules} from 'esri-loader';
-import './Map.css';
 
 type MapProps = {
   portalId: string;
   onViewReady?: (view: __esri.MapView) => void;
 };
-
 export const Map = ({portalId, onViewReady}: MapProps) => {
   const mapEl = useRef<HTMLDivElement>(null);
 
