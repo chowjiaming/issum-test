@@ -11,6 +11,7 @@ import {BasemapGallery} from '@/components/widgets/BasemapGallery';
 import {CoordinateConversion} from '@/components/widgets/CoordinateConversion';
 import {Daylight} from '@/components/widgets/Daylight';
 import {Slice} from '@/components/widgets/Slice';
+import {BuildingExplorer} from '@/components/widgets/BuildingExplorer';
 
 import {portalId} from '@/utils/config';
 
@@ -61,6 +62,14 @@ const App: React.FC = () => {
             <Card
               title="Slice"
               content={<Slice view={view as unknown as __esri.SceneView} />}
+            />
+          )}
+          {activeAction === 'Buildings' && (
+            <Card
+              title="Building Explorer"
+              content={
+                <BuildingExplorer view={view as unknown as __esri.SceneView} />
+              }
             />
           )}
         </>

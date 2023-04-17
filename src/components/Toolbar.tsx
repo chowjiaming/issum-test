@@ -37,6 +37,11 @@ export const Toolbar: React.FC<ToolbarProps> = ({onActionClick}) => {
             onClick={handleClick}
           />
           <CalciteAction text="Slice" icon="viewshed" onClick={handleClick} />
+          <CalciteAction
+            text="Buildings"
+            icon="organization"
+            onClick={handleClick}
+          />
         </CalciteActionBar>
       </CalciteShellPanel>
     </CalciteShell>
