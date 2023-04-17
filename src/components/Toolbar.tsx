@@ -1,4 +1,3 @@
-import '@esri/calcite-components/dist/calcite/calcite.css';
 import {
   CalciteAction,
   CalciteActionBar,
@@ -26,7 +25,18 @@ export const Toolbar: React.FC<ToolbarProps> = ({onActionClick}) => {
             icon="measure-line"
             onClick={handleClick}
           />
-          <CalciteAction text="Search" icon="search" onClick={handleClick} />
+          <CalciteAction text="Basemaps" icon="basemap" onClick={handleClick} />
+          <CalciteAction
+            text="Coordinates"
+            icon="compass"
+            onClick={handleClick}
+          />
+          <CalciteAction
+            text="Daylight"
+            icon="partly-cloudy"
+            onClick={handleClick}
+          />
+          <CalciteAction text="Slice" icon="viewshed" onClick={handleClick} />
         </CalciteActionBar>
       </CalciteShellPanel>
     </CalciteShell>
