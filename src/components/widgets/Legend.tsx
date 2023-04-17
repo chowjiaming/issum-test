@@ -22,7 +22,7 @@ export const Legend: React.FC<LegendProps> = ({view}) => {
     };
   }, [view, legendRef]);
 
-  return <CalcitePanel ref={legendRef} />;
+  return <CalcitePanel ref={legendRef} className="custom-calcite-panel" />;
 };
 
 Legend.displayName = 'Legend';

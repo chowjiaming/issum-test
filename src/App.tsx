@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {Map} from '@/components/map/Map';
-import {Toolbar} from '@/components/widgets/Toolbar';
+import {Map} from '@/components/Map';
+import {Toolbar} from '@/components/Toolbar';
 import {LayerList} from '@/components/widgets/LayerList';
 import {Legend} from '@/components/widgets/Legend';
 import {DistanceMeasurement} from '@/components/widgets/DistanceMeasurement';

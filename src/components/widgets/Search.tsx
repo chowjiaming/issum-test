@@ -22,7 +22,7 @@ export const Search: React.FC<SearchProps> = ({view}) => {
     };
   }, [view, searchRef]);
 
-  return <CalcitePanel ref={searchRef} />;
+  return <CalcitePanel ref={searchRef} className="custom-calcite-panel" />;
 };
 
 Search.displayName = 'Search';

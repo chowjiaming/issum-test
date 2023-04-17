@@ -22,7 +22,7 @@ export const LayerList: React.FC<LayerListProps> = ({view}) => {
     };
   }, [view, layerListRef]);
 
-  return <CalcitePanel ref={layerListRef} />;
+  return <CalcitePanel ref={layerListRef} className="custom-calcite-panel" />;
 };
 
 LayerList.displayName = 'LayerList';

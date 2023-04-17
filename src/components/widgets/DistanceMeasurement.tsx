@@ -29,7 +29,12 @@ export const DistanceMeasurement: React.FC<DistanceMeasurementProps> = ({
     };
   }, [view, distanceMeasurementRef]);
 
-  return <CalcitePanel ref={distanceMeasurementRef} />;
+  return (
+    <CalcitePanel
+      ref={distanceMeasurementRef}
+      className="custom-calcite-panel"
+    />
+  );
 };
 
 DistanceMeasurement.displayName = 'DistanceMeasurement';
