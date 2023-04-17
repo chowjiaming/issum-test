@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 import {Map} from '@/components/Map';
 import {Toolbar} from '@/components/Toolbar';
@@ -13,6 +13,7 @@ import {Daylight} from '@/components/widgets/Daylight';
 import {Slice} from '@/components/widgets/Slice';
 
 import {portalId} from '@/utils/config';
+
 import '@esri/calcite-components/dist/calcite/calcite.css';
 import '@/App.css';
 
