@@ -85,16 +85,16 @@ export const Map = ({portalId, onViewReady}: MapProps) => {
         onViewReady(view);
       }
 
-      // const buildingExplorer = new EsriBuildingExplorer({
-      //   view,
-      //   layers: [buildingLayer],
-      // });
+      const buildingExplorer = new EsriBuildingExplorer({
+        view,
+        layers: [buildingLayer],
+      });
       // const buildingExplorer2 = new EsriBuildingExplorer({
       //   view,
       //   layers: [buildingLayer2],
       // });
 
-      // view.ui.add(buildingExplorer, 'top-right');
+      view.ui.add(buildingExplorer, 'top-right');
       // view.ui.add(buildingExplorer2, 'top-right');
 
       const homeWidget = new EsriHome({view});
