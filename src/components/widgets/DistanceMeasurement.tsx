@@ -1,6 +1,5 @@
 import {createRef, useEffect} from 'react';
 import {loadModules} from 'esri-loader';
-import {CalcitePanel} from '@esri/calcite-components-react';
 
 type DistanceMeasurementProps = {
   view: __esri.MapView;
@@ -8,7 +7,7 @@ type DistanceMeasurementProps = {
 export const DistanceMeasurement: React.FC<DistanceMeasurementProps> = ({
   view,
 }) => {
-  const distanceMeasurementRef = createRef<HTMLCalcitePanelElement>();
+  const distanceMeasurementRef = createRef<HTMLDivElement>();
 
   useEffect(() => {
     let distanceMeasurement: __esri.DirectLineMeasurement3D;
@@ -29,12 +28,7 @@ export const DistanceMeasurement: React.FC<DistanceMeasurementProps> = ({
     };
   }, [view, distanceMeasurementRef]);
 
-  return (
-    <CalcitePanel
-      ref={distanceMeasurementRef}
-      className="custom-calcite-panel"
-    />
-  );
+  return <div ref={distanceMeasurementRef} className="daylight-widget" />;
 };
 
 DistanceMeasurement.displayName = 'DistanceMeasurement';
